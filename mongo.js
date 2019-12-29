@@ -1,10 +1,13 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
-const password = process.env.MONGODB_PASSWORD
-console.log(password)
+
+// You can put values to these to .env file in the project root
+const db_password = process.env.MONGODB_PASSWORD
+const db_account = process.env.MONGODB_ACCOUNT
+const db_database = process.env.MONGODB_DB
 
 const url = 
-`mongodb+srv://backend_aktia:${password}@cluster0-qw8ew.mongodb.net/note-test?retryWrites=true&w=majority`
+`mongodb+srv://${db_account}:${db_password}@cluster0-qw8ew.mongodb.net/${db_database}?retryWrites=true&w=majority`
 
 mongoose.connect(url, {useNewUrlParser:true})
 
