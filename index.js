@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -7,6 +8,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 const http = require('http')
+
 
 app.get('/', (req,res) => {
     res.send('<h1>Aktia app</h1>')
