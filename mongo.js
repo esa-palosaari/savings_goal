@@ -9,7 +9,9 @@ const db_database = process.env.MONGODB_DB
 const url = 
 `mongodb+srv://${db_account}:${db_password}@cluster0-qw8ew.mongodb.net/${db_database}?retryWrites=true&w=majority`
 
-mongoose.connect(url, {useNewUrlParser:true})
+mongoose.connect(url, {useNewUrlParser:true, useUnifiedTopology: true})
+    .then(() => console.log('MongoDB connected...'))
+    .catch(err => console.log(err))
 
 const noteSchema = new mongoose.Schema({
     content: String,
@@ -36,4 +38,6 @@ Note.find({}).then(result => {
         console.log(note)
     })
     mongoose.connection.close()
+        .then(() => console.log('MongoDB disconnected...'))
+        .catch(err => console.log(err))
 })
