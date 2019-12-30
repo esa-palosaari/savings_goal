@@ -7,6 +7,7 @@ const usersRouter = require('./controllers/users')
 const mongoose = require('mongoose')
 const testAPIRouter = require('./controllers/testAPI')
 const accountData = require('./development/accounts.json')
+const loginRouter = require('./controllers/login')
 
 // You can put values to these to .env file in the project root
 const db_password = process.env.MONGODB_PASSWORD
@@ -25,6 +26,7 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use('/api/testApi', testAPIRouter)
 app.use('/api/users', usersRouter)
+app.use('/api/login', loginRouter)
 
 app.get('/', (req,res) => {
     res.send('<h1>Aktia app</h1>')
