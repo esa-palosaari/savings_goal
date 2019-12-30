@@ -9,10 +9,12 @@ const db_database = process.env.MONGODB_DB
 const url = 
 `mongodb+srv://${db_account}:${db_password}@cluster0-qw8ew.mongodb.net/${db_database}?retryWrites=true&w=majority`
 
-mongoose.connect(url, {useNewUrlParser:true, useUnifiedTopology: true})
+mongoose.connect(url, { useNewUrlParser:true, 
+                        useUnifiedTopology: true})
     .then(() => console.log('MongoDB connected...'))
     .catch(err => console.log(err))
 
+mongoose.set('use.CreateIndex', true)
 const noteSchema = new mongoose.Schema({
     content: String,
     date: Date,

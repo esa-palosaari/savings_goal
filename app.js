@@ -21,7 +21,7 @@ mongoose.connect(url, {useNewUrlParser:true, useUnifiedTopology: true})
     .catch(err => console.log(err))
 
 
-    app.use(cors())
+app.use(cors())
 app.use(bodyParser.json())
 app.use('/api/testApi', testAPIRouter)
 app.use('/api/users', usersRouter)
