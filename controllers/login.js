@@ -20,10 +20,11 @@ loginRouter.post('/', async (request, response) => {
   const userForToken = {
     email: user.email,
     id: user._id,
+
   }
 
-  const token = jwt.sign(userForToken, process.env.SECRET)
-
+  const token = jwt.sign(userForToken, process.env.SECRET, {expiresIn: '1h'})
+  console.log('login after token')
   response
     .status(200)
     .send({ token, email: user.email, name: user.name })

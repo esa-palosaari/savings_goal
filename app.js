@@ -28,9 +28,11 @@ app.use('/api/testApi', testAPIRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
 
+
 app.get('/', (req,res) => {
     res.send('<h1>Aktia app</h1>')
 })
+
 
 // before getting access to Aktia Sandbox
 app.get('/api/accounts', (req, res) => {
@@ -38,9 +40,9 @@ app.get('/api/accounts', (req, res) => {
 })
 
 const unknownEndpoint = (request, response) => {
-    response.status(404).send({ error: 'unknown endpoint' })
+    response.status(404)
   }
   
-  app.use(unknownEndpoint)
+app.use(unknownEndpoint)
 
 module.exports = app
