@@ -6,16 +6,19 @@ const User = require('../models/user')
 loginRouter.post('/', async (request, response) => {
   const body = request.body
 
-  const user = await User.findOne({ email: body.email })
-  const passwordCorrect = user === null
-    ? false
-    : await bcrypt.compare(body.password, user.passwordHash)
+  try 
+  {
+    const user = await User.findOne({ email: body.email })
+    const passwordCorrect = user === null
+      ? false
+      : await bcrypt.compare(body.password, user.passwordHash)
 
-  if (!(user && passwordCorrect)) {
-    return response.status(401).json({
-      error: 'epäkelpo sähköpostiosoite tai salasana'
-    })
-  }
+    if (!(user && passwordCorrect)) {
+      return response.status(401).json({
+        error: 'epäkelpo sähköpostiosoite tai salasana'
+      })
+    }
+
 
   const userForToken = {
     email: user.email,
@@ -28,6 +31,12 @@ loginRouter.post('/', async (request, response) => {
   response
     .status(200)
     .send({ token, email: user.email, name: user.name })
+  } 
+  catch (err) 
+  {
+    next(err)
+  }
+
 })
 
 module.exports = loginRouter
