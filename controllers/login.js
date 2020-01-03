@@ -30,7 +30,11 @@ loginRouter.post('/', async (request, response) => {
   console.log('login after token')
   response
     .status(200)
-    .send({ token, email: user.email, name: user.name })
+    .send({ token, 
+            email: user.email, 
+            name: user.name,
+            goal: user.goal,
+            serverId:user._id })
   } 
   catch (err) 
   {
