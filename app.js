@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 const usersRouter = require('./controllers/users')
 const mongoose = require('mongoose')
 const testAPIRouter = require('./controllers/testAPI')
-const accountData = require('./development/accounts.json')
+const accountsRouter = require('./controllers/accounts')
 const loginRouter = require('./controllers/login')
 
 // You can put values to these to .env file in the project root
@@ -27,6 +27,7 @@ app.use(bodyParser.json())
 app.use('/api/testApi', testAPIRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/login', loginRouter)
+app.use('/api/accounts', accountsRouter)
 
 
 app.get('/', (req,res) => {

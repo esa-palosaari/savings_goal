@@ -47,36 +47,6 @@ const getTokenFrom = request => {
     return null
 }
 
-/* usersRouter.get('/checkAuth', (request, response, next) => {
-    console.log('in checkauth')
-    const token = getTokenFrom(request)
-    console.log('checking token:', token)
-        
-    try{    const decodedToken = jwt.verify(token, 
-            process.env.SECRET)
-        if (!token || !decodedToken.id) {
-            return response
-                    .status(401)
-                    .json({checkAuth:'fail'}).end()
-        } else {
-         return response.status(200).json({checkAuth:'pass'}).end()
-            
-        }  
-        
-    } catch(exception) {
-        if(exception.name === 'JsonWebTokenError') {
-            return response.status(200).json({checkAuth: 'fail'}).end()
-        } else if (exception.name === 'TokenExpiredError') {
-             console.log('token expired')
-             return response.status(200).json({checkAuth: 'expired'}).end()
-        } else {
-            console.log(exception)
-            response.status(500).json({error: 'something wrong in auth check'})
-            next(exception)
-        }
-    }
-})
- */
 usersRouter.get('/:id', (request, response, next) => {
 
     const token = getTokenFrom(request)
@@ -126,7 +96,16 @@ usersRouter.put('/:id', (request, response, next) => {
         })
         .catch(error => next(error))
     } catch(exception) {
-        next(exception)
+        if(exception.name === 'JsonWebTokenError') {
+            return response.send(null)
+        } else if (exception.name === 'TokenExpiredError') {
+             console.log('token expired')
+             return response.send(null)
+        } else {
+            console.log(exception)
+            response.status(500).json({error: 'something wrong in auth check'})
+            next(exception)
+        }
     }
 })
 

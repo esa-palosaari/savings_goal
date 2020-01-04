@@ -34,7 +34,7 @@ loginRouter.post('/', async (request, response) => {
             email: user.email, 
             name: user.name,
             goal: user.goal,
-            serverId:user._id })
+            id:user._id })
   } 
   catch (err) 
   {
