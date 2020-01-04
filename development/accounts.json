@@ -1,0 +1,225 @@
+{
+  "accounts": [
+    {
+      "resourceId": "RkkxMjM0NTY3ODkwMTIzNDU2",
+      "iban": "FI0340550019998505",
+      "currency": "EUR",
+      "name": "Perhetili",
+      "product": "Käyttötili",
+      "bic": "HELSFIHH",
+      "balances": [
+        {
+          "balanceType": "interimBooked",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "123.45"
+          }
+        },
+        {
+          "balanceType": "interimAvailable",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "134.67"
+          }
+        }
+      ],
+      "accountOwners": [
+        "Matti Testaaja",
+        "Kaisa Testaaja"
+      ],
+      "_links": {
+        "balances": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzNDU2/balances",
+        "transactions": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzNDU2/transactions"
+      }
+    },
+    {
+      "resourceId": "RkkxMjM0NTY3ODkwMTIzNDYX",
+      "iban": "FI7840550019998513",
+      "currency": "EUR",
+      "name": "Yrityksen maksutili",
+      "product": "Käyttötili",
+      "bic": "HELSFIHH",
+      "balances": [
+        {
+          "balanceType": "interimBooked",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "1340.42"
+          }
+        },
+        {
+          "balanceType": "interimAvailable",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "1020.34"
+          }
+        }
+      ],
+      "accountOwners": [
+        "Matti Testaaja"
+      ],
+      "_links": {
+        "balances": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzNDYX/balances",
+        "transactions": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzNDYX/transactions"
+      }
+    },
+    {
+      "resourceId": "RkkxMjM0NTY3ODkwMTIzXXXX",
+      "iban": "FI5640550019998521",
+      "currency": "EUR",
+      "name": "Tilin nickname",
+      "product": "Käyttötili",
+      "bic": "HELSFIHH",
+      "balances": [
+        {
+          "balanceType": "interimBooked",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "666.66"
+          }
+        },
+        {
+          "balanceType": "interimAvailable",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "1020.34"
+          }
+        }
+      ],
+      "accountOwners": [
+        "Matti Testaaja",
+        "Sanna Testaaja",
+        "Kaisa Testaaja"
+      ],
+      "_links": {
+        "balances": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzXXXX/balances",
+        "transactions": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzXXXX/transactions"
+      }
+    },
+    {
+      "resourceId": "RkkxMjM0NTY3ODkwMTIzX123",
+      "iban": "FI5540550019998539",
+      "currency": "EUR",
+      "name": "Omistajan tili",
+      "product": "Käyttötili",
+      "bic": "HELSFIHH",
+      "balances": [
+        {
+          "balanceType": "interimBooked",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "57123.43"
+          }
+        },
+        {
+          "balanceType": "interimAvailable",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "55123.43"
+          }
+        }
+      ],
+      "accountOwners": [
+        "Matti Testaaja"
+      ],
+      "_links": {
+        "balances": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzX123/balances",
+        "transactions": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzX123/transactions"
+      }
+    },
+    {
+      "resourceId": "RkkxMjM0NTY3ODkwMTIFgTTT",
+      "iban": "FI6840550019998596",
+      "currency": "EUR",
+      "name": "Account nickname",
+      "product": "Käyttötili",
+      "bic": "HELSFIHH",
+      "balances": [
+        {
+          "balanceType": "interimBooked",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "1399.42"
+          }
+        },
+        {
+          "balanceType": "interimAvailable",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "1399.34"
+          }
+        }
+      ],
+      "accountOwners": [
+        "Kaisa Testaaja"
+      ],
+      "_links": {
+        "balances": "/v1/accounts/RkkxMjM0NTY3ODkwMTIFgTTT/balances",
+        "transactions": "/v1/accounts/RkkxMjM0NTY3ODkwMTIFgTTT/transactions"
+      }
+    },
+    {
+      "resourceId": "RkkxMjM0NTY3ODkwMTITyt23",
+      "iban": "FI3340550019998547",
+      "currency": "EUR",
+      "name": "Omistajan tili - Only accounts access granted",
+      "product": "Käyttötili",
+      "bic": "HELSFIHH",
+      "balances": [
+        {
+          "balanceType": "interimBooked",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "57123.43"
+          }
+        },
+        {
+          "balanceType": "interimAvailable",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "55123.43"
+          }
+        }
+      ],
+      "accountOwners": [
+        "Matti Testaaja"
+      ],
+      "_links": {
+        "balances": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzX123/balances",
+        "transactions": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzX123/transactions"
+      }
+    },
+    {
+      "resourceId": "RkkxMjM0NTY3ODkwMTIzNDYY",
+      "iban": "FI3840550019998554",
+      "currency": "EUR",
+      "name": "Omistajan tili - Only accounts access granted",
+      "product": "Käyttötili",
+      "bic": "HELSFIHH",
+      "balances": [
+        {
+          "balanceType": "interimBooked",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "5323.43"
+          }
+        },
+        {
+          "balanceType": "interimAvailable",
+          "balanceAmount": {
+            "currency": "EUR",
+            "amount": "5523.43"
+          }
+        }
+      ],
+      "accountOwners": [
+        "Matti Testaaja",
+        "Kaisa Testaaja"
+      ],
+      "_links": {
+        "balances": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzNDYY/balances",
+        "transactions": "/v1/accounts/RkkxMjM0NTY3ODkwMTIzNDYY/transactions"
+      }
+    }
+  ]
+}
